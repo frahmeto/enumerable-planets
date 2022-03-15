@@ -8,7 +8,22 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
+<!--<h1>Pick a planet:</h1>-->
+<h1 class="col-md-8 offset-md-2">Time at our Galaxy</h1>
+<div class ="col-md-8 offset-md-2">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Planet</th>
+            <th>Earth Days in One Year</th>
+        </tr>
+        </thead>
+        <tr th:each="planet : ${planets}">
+            <td th:text="${planet.planetName}"></td>
+            <td th:text="${planet.yearLength}"></td>
+        </tr>
+    </table>
+</div>
 
 </body>
 </html>
